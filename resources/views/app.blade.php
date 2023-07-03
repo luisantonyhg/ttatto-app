@@ -24,7 +24,7 @@
             }
         </style>
     </head>
-    <body class="fondoImagen">
+    <body>
         @inertia
     </body>
 </html>

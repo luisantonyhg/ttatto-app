@@ -1,7 +1,7 @@
 
 
 <script setup>
-
+import GuestLayout from '@/Layouts/GuestLayout.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
@@ -31,7 +31,8 @@ const submit = () => {
 </script>
 
 <template>
-    <div class="home">
+    <GuestLayout>
+        <div class="home">
       <div class="container contenedor">
       <div class="screen">
           <div class="screen__content">
@@ -106,6 +107,8 @@ const submit = () => {
       </div>
   </div>
     </div>
+    </GuestLayout>
+  
   </template>
   
  
@@ -126,9 +129,7 @@ const submit = () => {
       font-family: Raleway, sans-serif;
   }
   
-  body {
-      background: linear-gradient(90deg, #1cd416, #06cd70);		
-  }
+
   
   .contenedor {
       display: flex;
@@ -299,7 +300,7 @@ const submit = () => {
     font-family: cursive;
       font-weight: 600;
       margin-bottom: 0px;
-      color: #3ab250;
+      color: #3a3eb2;
   }
   #cuerpo{
       background:rgb(231, 12, 12)

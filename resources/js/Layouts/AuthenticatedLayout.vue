@@ -11,6 +11,9 @@ const showingNavigationDropdown = ref(false);
 </script>
 
 <template>
+
+
+
     <div>
         <div class="min-h-screen bg-gray-100">
             <nav class="bg-white border-b border-gray-100">
@@ -19,30 +22,9 @@ const showingNavigationDropdown = ref(false);
                     <div class="flex justify-between h-16">
                         <div class="flex">
                             <!-- Logo -->
-                            <div class="shrink-0 flex items-center">
-                                <Link :href="route('dashboard')">
-                                    <ApplicationLogo
-                                        class="block h-11 w-auto fill-current text-gray-800"
-                                    />
-                                </Link>
-                            </div>
+                        
 
-                            <!-- Navigation Links -->
-                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    MIS CITAS
-                                </NavLink>
-                                <NavLink :href="route('tatuador.index')" :active="route().current('tatuador.index')" v-if="$page.props.auth.user.role === 'ADMIN' ">
-                                    TATUADORES
-                                </NavLink>
-
-                                <NavLink :href="route('cita.index')" :active="route().current('cita.index')" v-if="$page.props.auth.user.role === 'ADMIN' ">
-                                    CITAS
-                                </NavLink>
-                                <NavLink :href="route('usuario.index')" :active="route().current('usuario.index')" v-if="$page.props.auth.user.role === 'ADMIN' ">
-                                    USUARIOS
-                                </NavLink>
-                            </div>
+                          
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -145,6 +127,98 @@ const showingNavigationDropdown = ref(false);
                     </div>
                 </div>
             </nav>
+            <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+                <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                    <ul class="space-y-2 font-medium">
+                        <div class="shrink-0 flex items-center">
+                                <Link :href="route('dashboard')">
+                                    <ApplicationLogo
+                                        class="block h-11 w-auto fill-current text-gray-800"
+                                    />
+                                </Link>
+                            </div>
+                        <br>
+                        <br>
+                        <br>
+                        <li>
+                            <NavLink  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" :href="route('dashboard')" :active="route().current('dashboard')" v-if="$page.props.auth.user.role === 'ADMIN' ">
+                                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                                <span class="ml-3">CREAR CITAS</span>
+                                    
+                                </NavLink>
+                        </li>
+                        <br>
+                        <li>
+                            <NavLink  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" :href="route('tatuador.index')" :active="route().current('tatuador.index')" v-if="$page.props.auth.user.role === 'ADMIN' ">
+                                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                                <span class="ml-3">TATUADOR</span>
+                                    
+                                </NavLink>
+                        </li>
+                        <br>
+                        <li>
+                            <NavLink  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" :href="route('cita.index')" :active="route().current('cita.index')" v-if="$page.props.auth.user.role === 'ADMIN' ">
+                                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                                <span class="ml-3">TODAS LAS CITAS</span>
+                                    
+                                </NavLink>
+                        </li>
+                       
+                        <br>
+                        <li>
+                            <NavLink  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" :href="route('usuario.index')" :active="route().current('usuario.index')" v-if="$page.props.auth.user.role === 'ADMIN' " >
+                                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                                <span class="ml-3">USUARIOS CREADOS</span>
+                                    
+                                </NavLink>
+                        </li>
+                        <br>
+                      
+                        <li>
+                            <NavLink  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" :href="route('profile.edit')" :active="route().current('dashboard')" v-if="$page.props.auth.user.role === 'ADMIN' " >
+                                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                                <span class="ml-3">MI PERFIL</span>
+                                    
+                                </NavLink>
+                        </li>
+                        <br>
+                        <li>
+                            <NavLink  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" :href="route('logout')" method="post" as="button"  v-if="$page.props.auth.user.role === 'ADMIN' ">
+                                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                                <span class="ml-3">CERRAR SESION</span>
+                                    
+                                </NavLink>
+                        </li>
+                        <br>
+                        <li>
+                            <NavLink  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" :href="route('dashboard')" :active="route().current('dashboard')" v-if="$page.props.auth.user.role === 'USER' ">
+                                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                                <span class="ml-3">CREAR CITAS</span>
+                                    
+                                </NavLink>
+                        </li>
+                        <br>
+                        <li>
+                            <NavLink  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" :href="route('profile.edit')" :active="route().current('dashboard')" v-if="$page.props.auth.user.role === 'USER' " >
+                                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                                <span class="ml-3">MI PERFIL</span>
+                                    
+                                </NavLink>
+                        </li>
+                        <br>
+                        <li>
+                            <NavLink  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" :href="route('logout')" method="post" as="button"  v-if="$page.props.auth.user.role === 'USER' ">
+                                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                                <span class="ml-3">CERRAR SESION</span>
+                                    
+                                </NavLink>
+                        </li>
+                        
+                    
+                    </ul>
+                </div>
+              
+                </aside>
 
             <!-- Page Heading -->
             <header class="bg-white shadow" v-if="$slots.header">

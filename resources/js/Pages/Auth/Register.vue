@@ -23,7 +23,8 @@ const submit = () => {
 
 
 <template>
-    <div class="home">
+    <GuestLayout>
+        <div class="home">
       <div class="container contenedor">
       <div class="screen">
           <div class="screen__content">
@@ -118,6 +119,8 @@ const submit = () => {
       </div>
   </div>
     </div>
+    </GuestLayout>
+   
   </template>
   
  
