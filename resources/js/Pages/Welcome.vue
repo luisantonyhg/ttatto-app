@@ -37,7 +37,7 @@ const logo = `${APP_NAME}/images/logo.png`
                 >Dashboard</Link
             >
 
-            <template v-else>
+            <!-- <template v-else>
                 <Link
                     :href="route('login')"
                     class="font-semibold text-white hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
@@ -50,16 +50,19 @@ const logo = `${APP_NAME}/images/logo.png`
                     class="ml-4 font-semibold text-white hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
                     >Registro</Link
                 >
-            </template>
+            </template> -->
         </div>
 
         <div class="max-w-7xl mx-auto p-6 lg:p-8">
+            <div class="mt-16">
+                <h1 class="titulo-bienvenido">"BIENVENIDO A TATTO STUDIO"</h1>
+                </div>
             <div class="flex justify-center">
                 <img :src="logo" width="600" alt="">
             </div>
 
             <div class="mt-16">
-
+                    
             </div>
 
             <div class="flex justify-center mt-16 px-6 sm:items-center sm:justify-between">
@@ -82,13 +85,28 @@ const logo = `${APP_NAME}/images/logo.png`
                                     d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
                                 />
                             </svg>
-                            Desarrollado por:
+                            <div class="ml-4 text-center text-sm text-white dark:text-gray-400 sm:text-right sm:ml-0">
+                    <button class="boton-largo">
+                        <Link
+                    :href="route('login')"
+                    class="btn btn-primary font-semibold text-white hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                    >"INICIAR SESION"
+                    </Link>
+                </button>
+                </div>
+                           
                         </a>
                     </div>
                 </div>
 
                 <div class="ml-4 text-center text-sm text-white dark:text-gray-400 sm:text-right sm:ml-0">
-                    Luis Huamani Gonzales
+                    <button class="boton-largo">
+                        <Link
+                    :href="route('register')"
+                    class="btn btn-primary font-semibold text-white hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                    >"REGISTRATE"
+                    </Link>
+                </button>
                 </div>
             </div>
         </div>
@@ -103,5 +121,57 @@ const logo = `${APP_NAME}/images/logo.png`
     .dark\:bg-dots-lighter {
         background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E");
     }
+}
+.blue-button {
+  background-color: blue;
+  color: white;
+}
+.boton-largo {
+  display: inline-block;
+  padding: 15px 65px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+.boton-largo:hover {
+  background-color: #45a049;
+}
+
+.boton-largo:focus {
+  outline: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+.titulo-bienvenido {
+font-family: Calibri, sans-serif;
+  font-size: 66px;
+  font-weight: 500;
+  color: #fffefe;
+  text-align: center;
+  margin: 20px;
+  
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .titulo-bienvenido {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-bienvenido {
+    font-size: 24px;
+  }
 }
 </style>
