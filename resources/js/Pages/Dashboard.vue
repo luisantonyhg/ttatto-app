@@ -161,7 +161,7 @@ const reporte = (cita) => {
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">ROL: {{ $page.props.auth.user.role }}</h2>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">PERFIL: {{ $page.props.auth.user.role }}</h2>
         </template>
         <div class="py-12">
 
@@ -169,7 +169,7 @@ const reporte = (cita) => {
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="container py-10 px-10 mx-0 min-w-full flex flex-col items-center">
-                            <h2 class="text-5xl mb-3 text-black">Mis Citas</h2>
+                            <h2 class="text-5xl mb-3 text-black" style="color: blue;">Mis Citas</h2>
                             <button @click="openModalRegistro"
                                     class="bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded">
                                 Agregar cita
