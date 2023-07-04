@@ -64,17 +64,8 @@ const finalizar = (cita) => {
 }
 
 const reporte = (cita) => {
-    form.id = cita.id
-    form.get(route('cita.reporte'), {
-        preserveScroll: true,
-        onSuccess: () => {
-            form.reset()
-        },
-        onError: () => {
-
-        },
-        onFinish: () => form.reset(),
-    });
+  
+    window.open(`${APP_NAME}/citas/reporte/${cita.id}`, '_blank')
 }
 
 </script>

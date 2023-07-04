@@ -141,17 +141,20 @@ const eliminar = (cita) => {
 }
 
 const reporte = (cita) => {
-    form.id = cita.id
-    form.get(route('cita.reporte'), {
-        preserveScroll: true,
-        onSuccess: () => {
-            form.reset()
-        },
-        onError: () => {
+    console.log("Cita");
+    console.log(cita);
+    window.open(`${APP_NAME}/citas/reporte/${cita.id}`, '_blank')
+    // form.id = cita.id
+    // form.get(route('cita.reporte'), {
+    //     preserveScroll: true,
+    //     onSuccess: () => {
+    //         form.reset()
+    //     },
+    //     onError: () => {
 
-        },
-        onFinish: () => form.reset(),
-    });
+    //     },
+    //     onFinish: () => form.reset(),
+    // });
 }
 
 </script>

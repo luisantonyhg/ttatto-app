@@ -42,7 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/mis-citas/update', [MiCitaController::class, 'update'])->name('mi-cita.update');
     Route::delete('/mis-citas/delete', [MiCitaController::class, 'delete'])->name('mi-cita.delete');
 
-    Route::get("/citas/reporte", [CitaController::class, 'reporte'])->name('cita.reporte');
+    Route::get("/citas/reporte/{id}", [CitaController::class, 'reporte'])->name('cita.reporte');
 });
 
 Route::middleware(['auth', 'verified', 'role:ADMIN'])->group(function (){

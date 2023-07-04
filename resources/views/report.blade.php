@@ -11,6 +11,7 @@
     </style>
 </head>
 <body style="margin:0;padding:0;">
+ 
 <div style="text-align: center">
     <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
         <tr>
@@ -22,7 +23,7 @@
                         </td>
                     </tr>
                     <tr>
-                     
+                        
                         <td style="padding:10px 30px 42px 10px;">
                             <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
                                 <tr>
@@ -63,6 +64,8 @@
                             </table>
                         </td>
                     </tr>
+
+                   
                     <tr>
                         <td style="padding:30px;background:#ee4c50;">
                             <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;font-size:9px;font-family:Arial,sans-serif;">
@@ -88,6 +91,7 @@
                             </table>
                         </td>
                     </tr>
+                    
                 </table>
             </td>
         </tr>
