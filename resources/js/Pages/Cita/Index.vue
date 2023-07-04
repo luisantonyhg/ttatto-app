@@ -97,25 +97,25 @@ const reporte = (cita) => {
                                             <th class="min-w-[100px] py-4 px-4 font-medium text-black dark:text-white xl:pl-11">
                                                 #
                                             </th>
-                                            <th class="min-w-[220px] py-4 px-4 font-medium text-black dark:text-white xl:pl-11">
+                                            <th class="min-w-[220px] py-4 px-4 font-medium text-black dark:text-white xl:pl-11" style="color: rgb(78, 165, 16);">
                                                 Cliente
                                             </th>
-                                            <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white xl:pl-11">
+                                            <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white xl:pl-11" style="color: rgb(78, 165, 16);">
                                                 Fecha
                                             </th>
-                                            <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
+                                            <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white" style="color: rgb(78, 165, 16);">
                                                 Hora Inicia
                                             </th>
-                                            <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
+                                            <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white" style="color: rgb(78, 165, 16);">
                                                 Hora termina
                                             </th>
-                                            <th class="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white">
+                                            <th class="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white" style="color: rgb(78, 165, 16);">
                                                 Tatuador
                                             </th>
-                                            <th class="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white">
+                                            <th class="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white" style="color: rgb(78, 165, 16);">
                                                 Estado
                                             </th>
-                                            <th class="py-4 px-4 font-medium text-black dark:text-white">
+                                            <th class="py-4 px-4 font-medium text-black dark:text-white" style="color: rgb(78, 165, 16);">
                                                 Acciones
                                             </th>
                                         </tr>
