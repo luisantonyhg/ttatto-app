@@ -191,7 +191,10 @@ const reporte = (cita) => {
                                                 Fecha
                                             </th>
                                             <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
-                                                Hora
+                                                Hora Inicia
+                                            </th>
+                                            <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
+                                                Hora Termina
                                             </th>
                                             <th class="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white">
                                                 Tatuador
@@ -211,6 +214,9 @@ const reporte = (cita) => {
                                             </td>
                                             <td class="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                                                 <p class="text-black dark:text-white">{{ cita.hora }}</p>
+                                            </td>
+                                            <td class="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                                                <p class="text-black dark:text-white">{{ cita.horatermina }}</p>
                                             </td>
                                             <td class="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                                                 <p class="inline-flex rounded-full bg-success bg-opacity-10 py-1 px-3 text-sm font-medium text-success">
@@ -255,7 +261,7 @@ const reporte = (cita) => {
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="container py-10 px-10 mx-0 min-w-full">
-                        <h2 class="text-3xl mb-3 text-primary">Registrar Cita</h2>
+                        <h2 class="text-3xl mb-3 text-primary" style="color:blue">Registrar Cita</h2>
                         <section>
                             <form @submit.prevent="register">
                                 <div class="p-6.5">

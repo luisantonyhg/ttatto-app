@@ -5,15 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="x-apple-disable-message-reformatting">
     <title></title>
-    <!--[if mso]>
-    <noscript>
-        <xml>
-            <o:OfficeDocumentSettings>
-                <o:PixelsPerInch>96</o:PixelsPerInch>
-            </o:OfficeDocumentSettings>
-        </xml>
-    </noscript>
-    <![endif]-->
+    
     <style>
         table, td, div, h1, p {font-family: Arial, sans-serif;}
     </style>
@@ -30,6 +22,7 @@
                         </td>
                     </tr>
                     <tr>
+                     
                         <td style="padding:10px 30px 42px 10px;">
                             <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
                                 <tr>

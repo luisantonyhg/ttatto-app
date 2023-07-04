@@ -24,13 +24,14 @@ const showingNavigationDropdown = ref(false);
             </nav>
 
             <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-blue-500" aria-label="Sidebar">
-                <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 " style="background:rgb(169, 204, 227)">
                     <ul class="space-y-2 font-medium">
                         <div class="">
                                 <Link :href="route('dashboard')">
-                                    <ApplicationLogo
+                                    <ApplicationLogo 
                                         class=""
-                                    />
+                                       />
+                                 
                                     <br>
                                     <span class="ml-3" style="color: blue;">MI NOMBRE :</span>
                                     <hr>
@@ -121,7 +122,7 @@ const showingNavigationDropdown = ref(false);
                 </aside>
 
         
-            <header class="bg-white shadow" v-if="$slots.header">
+            <header class="bg-white shadow" v-if="$slots.header"  style="background:rgb(169, 204, 227)">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <slot name="header" />
                 </div>

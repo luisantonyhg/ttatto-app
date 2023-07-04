@@ -31,10 +31,14 @@ class CitaController extends Controller
 
     public function reporte(Request $request)
     {
+       
         $cita = Cita::where('id', $request->id)
             ->with(['tatuador', 'user'])
             ->first();
+        
+
         $usuario = auth()->user();
+      
         $pdf = app('dompdf.wrapper');
         $pdf->getDomPDF()->set_option("enable_php", true);
         $pdf->loadView('report', compact('cita', 'usuario'));

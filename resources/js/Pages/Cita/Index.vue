@@ -113,7 +113,10 @@ const reporte = (cita) => {
                                                 Fecha
                                             </th>
                                             <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
-                                                Hora
+                                                Hora Inicia
+                                            </th>
+                                            <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
+                                                Hora termina
                                             </th>
                                             <th class="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white">
                                                 Tatuador
@@ -139,6 +142,9 @@ const reporte = (cita) => {
                                             </td>
                                             <td class="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                                                 <p class="text-black dark:text-white">{{ cita.hora }}</p>
+                                            </td>
+                                            <td class="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                                                <p class="text-black dark:text-white">{{ cita.horatermina }}</p>
                                             </td>
                                             <td class="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                                                 <p class="inline-flex rounded-full bg-success bg-opacity-10 py-1 px-3 text-sm font-medium text-success">
