@@ -31,12 +31,7 @@
                                         <h1 style="font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;">Cita generada por: {{ $cita->user->name }}</h1>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td style="padding:0 0 16px 0;color:#153643;">
-                                        <h1 style="font-size:24px;margin:0 0 10px 0;font-family:Arial,sans-serif;">Nro. DNI</h1>
-                                        <p style="margin:0 0 8px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">{{ $cita->dni }}</p>
-                                    </td>
-                                </tr>
+                          
                                 <tr>
                                     <td style="padding:0 0 16px 0;color:#153643;">
                                         <h1 style="font-size:24px;margin:0 0 10px 0;font-family:Arial,sans-serif;">Celular</h1>
@@ -51,8 +46,14 @@
                                 </tr>
                                 <tr>
                                     <td style="padding:0 0 16px 0;color:#153643;">
-                                        <h1 style="font-size:24px;margin:0 0 10px 0;font-family:Arial,sans-serif;">Hora</h1>
+                                        <h1 style="font-size:24px;margin:0 0 10px 0;font-family:Arial,sans-serif;">Hora Inicia</h1>
                                         <p style="margin:0 0 8px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">{{ $cita->hora }}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 0 16px 0;color:#153643;">
+                                        <h1 style="font-size:24px;margin:0 0 10px 0;font-family:Arial,sans-serif;">hora Termina</h1>
+                                        <p style="margin:0 0 8px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">{{ $cita->horatermina }}</p>
                                     </td>
                                 </tr>
                                 <tr>
